@@ -129,7 +129,7 @@ export class Login extends Component {
                     <div className="row">
                         <div className="col-sm-4 mt-2"></div>
                         <div className="col-sm-4 right">
-                            <a href="/register">Forget Password</a>
+                            <a href="/CompanySignUp">Sign Up</a>
                         </div>
                         <div className="col-sm-4 mt-2"></div>
                         </div>
