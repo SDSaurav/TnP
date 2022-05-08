@@ -1,57 +1,38 @@
-import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
+import React, {Component} from "react";
 
-const FormPage = () => {
-    return (
-        <MDBContainer>
-            <MDBRow>
-                <MDBCol md="6">
-                    <form>
-                        <p className="h5 text-center mb-4">Sign up</p>
-                        <div className="grey-text">
-                            <MDBInput
-                                label="Your name"
-                                icon="user"
-                                group
-                                type="text"
-                                validate
-                                error="wrong"
-                                success="right"
-                            />
-                            <MDBInput
-                                label="Your email"
-                                icon="envelope"
-                                group
-                                type="email"
-                                validate
-                                error="wrong"
-                                success="right"
-                            />
-                            <MDBInput
-                                label="Confirm your email"
-                                icon="exclamation-triangle"
-                                group
-                                type="text"
-                                validate
-                                error="wrong"
-                                success="right"
-                            />
-                            <MDBInput
-                                label="Your password"
-                                icon="lock"
-                                group
-                                type="password"
-                                validate
-                            />
-                        </div>
-                        <div className="text-center">
-                            <MDBBtn color="primary">Register</MDBBtn>
-                        </div>
-                    </form>
-                </MDBCol>
-            </MDBRow>
-        </MDBContainer>
-    );
-};
+export default class SignUp extends Component {
+    render() {
+        return (
+            <form className="loginForm">
+                <div className="loginblur">
+                    <h2 align="center">Register</h2>
 
-export default FormPage;
+                    <div className="form-group">
+                        <label>Company name</label>
+                        <input type="text" className="form-control" placeholder="Company name"/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>HR name</label>
+                        <input type="text" className="form-control" placeholder="HR name"/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Email</label>
+                        <input type="email" className="form-control" placeholder="Enter email"/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Password</label>
+                        <input type="password" className="form-control" placeholder="Enter password"/>
+                    </div>
+
+                    <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
+                    <p className="forgot-password text-right">
+                        Already registered <a href="/login">log in?</a>
+                    </p>
+                </div>
+            </form>
+        );
+    }
+}
