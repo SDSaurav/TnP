@@ -86,52 +86,59 @@ export class Login extends Component {
         return (
             <div className="App">
                 <form className="loginForm">
-                        <div className="loginblur">
-                            <h1 align="center">SIGN-IN</h1>
-                    <div className="row" align= "center">
-                        <div className="col-sm-3"></div>
-                        <label htmlFor="username" className="col-sm-2 col-form-label text-center">User Name:</label>
-                        <div className="col-sm-3 mb-2">
-                            <input type="text" value={username} name="username" onChange={(e) => {
-                                this.inputChange(e)
-                            }} className="form-control" id="username" placeholder="enter username"/>
-                            {submitted && errors.username.length > 0 &&
-                                <span className='error'>{errors.username}</span>}
+                    <div className="loginblur">
+                        <h2 align="center">SIGN-IN</h2>
+                        <div className="row">
+                            <div className="col-sm-12"></div>
+                            <div className="col-sm-12"></div>
                         </div>
-                        <div className="col-sm-4">
+                        <div className="row" align="center">
+                            <div className="col-sm-3"></div>
+                            <label htmlFor="username" className="col-sm-3 col-form-label text-center">User Name:</label>
+                            <div className="col-sm-4 mb-2">
+                                <input type="text" value={username} name="username" onChange={(e) => {
+                                    this.inputChange(e)
+                                }} className="form-control" id="username" placeholder="enter username"/>
+                                {submitted && errors.username.length > 0 &&
+                                    <span className='error'>{errors.username}</span>}
+                            </div>
+                            <div className="col-sm-4">
+                            </div>
                         </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-3"></div>
-                        <label htmlFor="password" className="col-sm-2 col-form-label text-center">Password:</label>
-                        <div className="col-sm-3 mb-2">
-                            <input type="password" value={password} autoComplete="on" name="password"
-                                   onChange={(e) => {
-                                       this.inputChange(e)
-                                   }} className="form-control" id="password" placeholder="enter Password"/>
-                            {submitted && errors.password.length > 0 &&
-                                <span className='error'>{errors.password}</span>}
+                        <div className="row">
+                            <div className="col-sm-3"></div>
+                            <label htmlFor="password" className="col-sm-3 col-form-label text-center">Password:</label>
+                            <div className="col-sm-4 mb-2">
+                                <input type="password" value={password} autoComplete="on" name="password"
+                                       onChange={(e) => {
+                                           this.inputChange(e)
+                                       }} className="form-control" id="password" placeholder="enter Password"/>
+                                {submitted && errors.password.length > 0 &&
+                                    <span className='error'>{errors.password}</span>}
+                            </div>
+                            <div className="col-sm-4"></div>
                         </div>
-                        <div className="col-sm-4"></div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-12 center mt-1">
-                            {submitted && loginStatus.length > 0 && <span className='error'>{loginStatus}</span>}
+                        <div className="row">
+                            <div className="col-sm-12 center mt-1">
+                                {submitted && loginStatus.length > 0 && <span className='error'>{loginStatus}</span>}
+                            </div>
                         </div>
-                    </div>
-                    <div className="row ">
-                        <div className="col text-center">
-                            <div className="col-sm-12 center mt-2">
-                            <button type="submit"  className="button" onClick={this.loginForm}>Login</button>
+                        <div className="row ">
+                            <div className="col text-center">
+                                <div className="col-sm-12 center mt-2">
+                                    <button type="submit" className="button" onClick={this.loginForm}>Login</button>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-4 mt-2"></div>
-                        <div className="col-sm-4 right">
-                            <a href="/CompanySignUp">Sign Up</a>
-                        </div>
-                        <div className="col-sm-4 mt-2"></div>
+                        <div className="row">
+                            <div className="col-sm-4 mt-2"></div>
+                            <div className="col-sm-3 mt-2"></div>
+                            <div className="col-sm-5 right">
+                                <div className="forgot-password text-right">Don't have an account?
+                                    <a href="/CompanySignUp"> Sign Up</a>
+                                </div>
+                            </div>
+                            <div className="col-sm-4 mt-2"></div>
                         </div>
                     </div>
                 </form>
