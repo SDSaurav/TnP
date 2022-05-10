@@ -85,7 +85,7 @@ export class Login extends Component {
         const {username, password, errors, submitted, loginStatus} = this.state;
         return (
             <div className="App">
-                <form className="loginForm">
+                <form className="pagecenter loginForm">
                     <div className="loginblur">
                         <h2 align="center">SIGN-IN</h2>
                         <div className="row">
@@ -94,11 +94,11 @@ export class Login extends Component {
                         </div>
                         <div className="row" align="center">
                             <div className="col-sm-3"></div>
-                            <label htmlFor="username" className="col-sm-3 col-form-label text-center">User Name:</label>
+                            <label htmlFor="username" className="col-sm-3 col-form-label text-center">UserName:</label>
                             <div className="col-sm-4 mb-2">
                                 <input type="text" value={username} name="username" onChange={(e) => {
                                     this.inputChange(e)
-                                }} className="form-control" id="username" placeholder="enter username"/>
+                                }} className="form-control" id="username" placeholder="Enter username"/>
                                 {submitted && errors.username.length > 0 &&
                                     <span className='error'>{errors.username}</span>}
                             </div>
