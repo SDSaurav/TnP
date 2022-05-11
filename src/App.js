@@ -15,6 +15,7 @@ import Register from "./Components/Register";
 import Dashboard from "./Components/Dashboard";
 import HRDetails from "./Components/HRDetails";
 import Navigation from "./Components/Navigation";
+import InternshipD from "./Components/InternshipD";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/dashboard" element={<Dashboard/>}/>
                     <Route path="/Register" element={<Register/>}/>
                     <Route path="/HRDetails" element={<HRDetails/>}/>
+                    <Route path="/InternshipD" element={<InternshipD/>}/>
                 </Routes>
                 {/*<Footer />*/}
             </Router>

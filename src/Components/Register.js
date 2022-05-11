@@ -22,23 +22,23 @@ export default class Register extends Component {
                         <input type="text" className="form-control" placeholder="MNC/StartUp"/>
                     </div>
                     <div className="form-group">
-                        <lanpmbel>Basic Criteria</lanpmbel>
+                        <label>Basic Criteria</label>
                         <input type="text" className="form-control" placeholder="MNC/StartUp"/>
                     </div>
                     <div className="form-group">
-                        <lanpmbel>Last Announced Package</lanpmbel>
+                        <label>Last Announced Package</label>
                         <input type="text" className="form-control" placeholder="last package offered"/>
                     </div>
                     <div className="form-group">
-                        <lanpmbel>Number of Positions</lanpmbel>
+                        <label>Number of Positions</label>
                         <input type="number" className="form-control" placeholder="total positions available"/>
                     </div>
                     <div className="form-group">
-                        <lanpmbel>Last Declared Bond Details</lanpmbel>
+                        <label>Last Declared Bond Details</label>
                         <input type="text" className="form-control" placeholder="previous bond details"/>
                     </div>
                     <div className="form-group">
-                        <lanpmbel>Previous Placed Students</lanpmbel>
+                        <label>Previous Placed Students</label>
                         <input type="number" className="form-control" placeholder="number of student placed last year"/>
                     </div>
 

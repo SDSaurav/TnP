@@ -14,7 +14,7 @@ export default class HRDetails extends Component {
 
                     <div className="form-group">
                         <label>Phone Number</label>
-                        <input type="number" className="form-control" placeholder="enter phone number"/>
+                        <input type="tel" className="form-control" placeholder="enter phone number"/>
                     </div>
 
                     <div className="form-group">
@@ -22,7 +22,7 @@ export default class HRDetails extends Component {
                         <input type="email" className="form-control" placeholder="Email Address"/>
                     </div>
                     <div className="form-group">
-                        <lanpmbel>Designation</lanpmbel>
+                        <label>Designation</label>
                         <input type="text" className="form-control" placeholder="Your Designation"/>
                     </div>
 
