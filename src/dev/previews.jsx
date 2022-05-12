@@ -5,6 +5,9 @@ import Login from "../Components/login";
 import FormPage from "../Components/CompanySignUp";
 import App from "../App";
 import Home from "../Components/Home";
+// import Navigation from "../Components/Navigation";
+import SignUp from "../Components/CompanySignUp";
+import Dashboard from "../Components/Dashboard";
 import Navigation from "../Components/Navigation";
 
 const ComponentPreviews = () => {
@@ -21,6 +24,15 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/Home">
                 <Home/>
+            </ComponentPreview>
+            {/*<ComponentPreview path="/Navigation">*/}
+            {/*    <Navigation/>*/}
+            {/*</ComponentPreview>*/}
+            <ComponentPreview path="/SignUp">
+                <SignUp/>
+            </ComponentPreview>
+            <ComponentPreview path="/Dashboard">
+                <Dashboard/>
             </ComponentPreview>
             <ComponentPreview path="/Navigation">
                 <Navigation/>

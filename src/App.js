@@ -8,9 +8,14 @@ import {
     Route,
     Link, Routes
 } from "react-router-dom";
-import Navigation from "./Components/Navigation";
+// import Navigation from "./Components/Navigation";
 import Home from "./Components/Home";
 import CompanySignUp from "./Components/CompanySignUp";
+import Register from "./Components/Register";
+import Dashboard from "./Components/Dashboard";
+import HRDetails from "./Components/HRDetails";
+import Navigation from "./Components/Navigation";
+import InternshipD from "./Components/InternshipD";
 
 function App() {
     return (
@@ -21,11 +26,16 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/Login" element={<Login/>}/>
                     <Route path="/CompanySignUp" element={<CompanySignUp/>}/>
+                    <Route path="/dashboard" element={<Dashboard/>}/>
+                    <Route path="/Register" element={<Register/>}/>
+                    <Route path="/HRDetails" element={<HRDetails/>}/>
+                    <Route path="/InternshipD" element={<InternshipD/>}/>
                 </Routes>
                 {/*<Footer />*/}
             </Router>
         </div>
     );
+
 }
 
 export default App;
