@@ -8,6 +8,7 @@ import Home from "../Components/Home";
 // import Navigation from "../Components/Navigation";
 import SignUp from "../Components/CompanySignUp";
 import Dashboard from "../Components/Dashboard";
+import Navigation from "../Components/Navigation";
 
 const ComponentPreviews = () => {
     return (
@@ -32,6 +33,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/Dashboard">
                 <Dashboard/>
+            </ComponentPreview>
+            <ComponentPreview path="/Navigation">
+                <Navigation/>
             </ComponentPreview>
         </Previews>
     );
