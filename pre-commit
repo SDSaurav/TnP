@@ -1,0 +1,13 @@
+#!/bin/sh
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+user="$GIT_AUTHOR_EMAIL"
+
+echo "Running Pre Commit Hook"
+
+if [ "$branch" = "master" ] && ([ "$user" = "milind.rai@hotmail.com" ] || [ "$user" = "milind.chaudhary@grofers.com" ]); then
+	exit 0 # push will execute
+else
+  echo "You can't commit directly to master branch"
+  exit 1
+fi

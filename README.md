@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Bvicam
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Bvicam** this is a core repository for bvicam incubation cell
 
-## Available Scripts
+### Using Git
 
-In the project directory, you can run:
+- Create a copy of repository in your system
+```
+git clone https://github.com/Bvicam/bvicam-core
+```
 
-### `npm start`
+- Checkout into your own new branch
+```
+git checkout -b <branch name>
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Add all files to git
+```
+git add .
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Commit your changes with message
+```
+git commit -m "<message>"
+```
 
-### `npm test`
+- Publish your changes on github
+```
+git push
+```
+#### Preventing Git Conflicts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- New branch should be created from master with latest pull
+- Naming Convention
+`
+ feature/<feature name>
+`
+`
+ fix/<fix name>
+`
+`
+  cleanup/<cleanup name>
+`
+- If conflict occurs merge master into your own branch and resolve conflicts, then push the changes
+To merge, go to your own branch and enter command: git merge master
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Git Restrictions
+- Never commit and push on master 
+- Never merge your on Pull Request
+- Never delete master
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Useful Git Commands
+`
+git tag -n9
+`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`
+git checkout tags/<tag> -b <branch>
+`
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
