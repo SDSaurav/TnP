@@ -1,0 +1,145 @@
+.App {
+  background-color: white;
+  text-align: center;
+  background-image: url("./Images/bg.jpg");
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.home {
+  height: 90%;
+  width: 100%;
+  background-color: #a6e1ec;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: cover;
+  margin-top: -2em;
+}
+.navbar-header{
+  margin-left: 1em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.loginblur{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid #d3d3d3;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5em;
+  margin: 10px auto 1em;
+  padding: 1em;
+  text-align: left;
+}
+
+
+
+.loginForm {
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: .5em;
+  margin: 100px auto 1em;
+  padding: 1em;
+  text-align: left;
+  width: 600px;
+
+
+}
+
+.App-header {
+  /*background-color: #282c34;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html, body {
+  height: 100% !important;
+  margin: 0;
+}
+
+.form-control, .col-form-label, .custom-select, label, header, footer {
+  font-size: 1.2rem !important;
+}
+
+.button {
+  padding: .6rem 2rem;
+  line-height: 1.5;
+  border-radius: .4rem;
+  color: #fff;
+  background-color: #1b8bec;
+  border-color: #6c757d;
+  text-decoration: none;
+  border: 1px solid rgb(24, 24, 80);
+}
+
+.pagecenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.right {
+  text-align: right;
+}
+
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  text-align: center;
+  margin: 10px;
+  width: 100%;
+  color: #1b8bec;
+}
+
+.link-button:hover,
+.link-button:focus {
+  text-decoration: none;
+}
+.dashboard{
+  background-color: black;
+}
+.square h3{
+  color:white;
+  font-size: 3em;
+  text-align: left;
+}
+
+
