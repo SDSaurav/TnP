@@ -7,7 +7,7 @@ const Company = sequelize.define('Company', {
     },
 
     phNumber: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
 
     email: {

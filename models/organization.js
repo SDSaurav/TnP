@@ -8,7 +8,7 @@ const Organization = sequelize.define('Organization', {
     },
 
     size: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
 
     type: {
@@ -21,19 +21,19 @@ const Organization = sequelize.define('Organization', {
     },
 
     package: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
 
     position: {
-        type: DataTypes.NUMBER
-    },
-
-    bond: {
         type: DataTypes.STRING
     },
 
+    bond: {
+        type: DataTypes.INTEGER
+    },
+
     LastPlacedStudents: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
 }, {
 

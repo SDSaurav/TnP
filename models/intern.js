@@ -3,19 +3,19 @@ const sequelize = require('../config/pg');
 
 const Intern = sequelize.define('Intern', {
     rollNo: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
     companyD: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
     location: {
         type: DataTypes.STRING
     },
     startD: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
     endD: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
     duration: {
         type: DataTypes.STRING

@@ -56,6 +56,25 @@ router.get('/test1', async (req, res, next) => {
   res.send("Hello World.")
 })
 
+router.get('/test2', async (req, res, next) => {
+
+  const intern= await new Intern({
+    rollNo: 4,
+    companyD:4,
+    location: "rampur",
+    startD:3 ,
+    endD:5,
+    duration:"5 hours" ,
+  })
+  console.log(intern)
+
+  const internObject = await intern.save();
+
+  console.log(internObject);
+
+  res.send("Hello World.")
+})
+
 // router.get('/test2', async (req, res, next) => {
 //
 //   const organization= await new Organization({
