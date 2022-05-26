@@ -5,8 +5,9 @@ function Navigation() {
         <div className="navigation">
             <nav className="navbar navbar-expand navbar-dark bg-dark">
                 <div className="container">
-                    <img className="navbar-logo" alt="logo"/>
-                    <a className="navbar-header navbar-brand page-scroll" href="http://bvicam.in/">Company Login</a>
+                    <img className="navbar-logo"/>
+                    <a className="navbar-header navbar-brand page-scroll" href="http://bvicam.in/">Bharati Vidyapeeth Institute of
+                        Computer Application and Management</a>
                     <div>
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
