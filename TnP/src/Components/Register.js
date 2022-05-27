@@ -5,7 +5,7 @@ export default class Register extends Component {
         return (
             <form className="loginForm">
                 <div className="loginblur">
-                    <h2 align="center">Register</h2>
+                    <h2 align="center">Placement Registration</h2>
 
                     <div className="form-group">
                         <label>Company name</label>
