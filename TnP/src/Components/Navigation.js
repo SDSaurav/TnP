@@ -1,10 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Navbar from './Navbar';
 function Navigation() {
     return (
         <div className="navigation">
             <nav className="navbar navbar-expand navbar-dark bg-dark">
                 <div className="container">
+                    <Navbar/>
                     <img className="navbar-logo"/>
                     <a className="navbar-header navbar-brand page-scroll" href="http://bvicam.in/">Bharati Vidyapeeth Institute of
                         Computer Application and Management</a>
@@ -25,6 +27,7 @@ function Navigation() {
                     </div>
                 </div>
             </nav>
+
         </div>
     );
 }
