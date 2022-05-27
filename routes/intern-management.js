@@ -1,41 +1,34 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-const {Intern}=require('../models');
+// const {authenticate} = require("../utils/middlewares");
+const {createNewIntern, retrieveIntern, deleteIntern, retrieveAllInterns, updateIntern} = require("../controllers/intern-management");
 
-router.get('/interns',async(req,res)=>{
-    const interns=await Intern.findAll();
-    res.json(interns);
-})
-router.post('/interns',async(req,res)=>{
-    const intern=new Intern(req.body);
-    await intern.save();
-    res.json(intern);
-})
-router.get('/interns/:id',async(req,res)=>{
-    const internId=req.params.id;
-    // const intern=await Intern.findByPk(internId);
-    const intern=await Intern.findOne({where:{ id: internId}});
-    res.json(intern);
-})
-router.delete('/interns/:id',async(req,res)=>{
-    const internId=req.params.id;
-    await Intern.destroy({where:{ id: internId}});
-    res.json({message:"intern deleted"})
-})
-router.put('/companies/:id',async(req,res)=>{
-    const internId=req.params.id;
+// router.get('/interns', authenticate, retrieveAllInterns)
+// router.post('/interns', authenticate, createNewIntern)
 
-    const intern=await Intern.findByPk(internId);
+// router.route('/interns')
+//     .get( authenticate,retrieveAllInterns)
+//     .post( authenticate,createNewIntern);
 
-    if(req.body.rollNo){
-        intern.rollNo=req.body.rollNo;
-    }
-    // if(req.body.password){
-    //     intern.password=req.body.password;
-    // }
+router.route('/interns')
+    .get( retrieveAllInterns)
+    .post( createNewIntern);
 
-    await intern.save();
-    res.json(intern);
-})
-module.exports=router;
+
+
+// router.get('/interns/:id', authenticate, retrieveIntern)
+// router.delete('/interns/:id', authenticate, deleteIntern)
+// router.put('/interns/:id', authenticate, updateIntern)
+
+// router.route('/interns/:id')
+//     .get(authenticate, retrieveIntern)
+//     .delete(authenticate, deleteIntern)
+//     .put(authenticate, updateIntern);
+
+router.route('/interns/:id')
+    .get( retrieveIntern)
+    .delete( deleteIntern)
+    .put( updateIntern);
+
+module.exports = router;

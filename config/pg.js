@@ -25,6 +25,7 @@ const connect = async () => {
 };
 
 connect().then(() => {
+    //alter: true dangerous
     return sequelize.sync({alter: true});
 }).then(() => {
     console.log("ok")
