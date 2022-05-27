@@ -8,6 +8,9 @@ const Company = sequelize.define('Company', {
     email: {
         type: DataTypes.STRING
     },
+    age: {
+        type: DataTypes.Integer
+    },
     password: {
         type: DataTypes.STRING
     },
