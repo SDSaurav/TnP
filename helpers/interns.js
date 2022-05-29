@@ -1,4 +1,4 @@
-const {Intern} = require("../models");
+const { Intern} = require("../models");
 
 exports.createIntern = async (data) => {
     const intern = new Intern(data);

@@ -1,10 +1,11 @@
 const {createIntern, retrieveInternById, deleteInternById, retrieveAllInterns, updateInternWithData} = require("../helpers/Interns");
+const {createOrganization} = require("../helpers/organizations");
 
 
 exports.createNewIntern= async (req, res)=>{
     try {
-        if (req.body.rollNo && req.body.companyD && req.body.location && req.body.startD) {
-            const intern = new Intern(req.body);
+        if (req.body.rollNo && req.body.companyD ) {
+            const intern =await createIntern(req.body);
             await intern.save();
             res.json(intern);
         } else {
