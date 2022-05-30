@@ -2,7 +2,7 @@ const {createOrganization, retrieveOrganizationById, deleteOrganizationById, ret
 
 exports.createNewOrganization = async (req, res) => {
     try{
-        if( req.body.name && req.body.package){
+        if( req.body.name && req.body.package && req.body.bond){
             const organization = await createOrganization(req.body);
             res.json(organization);
         } else {
