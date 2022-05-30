@@ -1,41 +1,32 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-const {Company}=require('../models');
+//const {authenticate} = require("../utils/middlewares");
+const {createNewCompany, retrieveCompany, deleteCompany, retrieveAllCompanies, updateCompany} = require("../controllers/Company-management");
 
-router.get('/companies',async(req,res)=>{
-    const companies=await Company.findAll();
-    res.json(companies);
-})
-router.post('/companies',async(req,res)=>{
-    const company=new Company(req.body);
-    await company.save();
-    res.json(company);
-})
-router.get('/companies/:id',async(req,res)=>{
-    const companyId=req.params.id;
-    // const company=await Company.findByPk(companyId);
-    const company=await Company.findOne({where:{ id: companyId}});
-    res.json(company);
-})
-router.delete('/companies/:id',async(req,res)=>{
-    const companyId=req.params.id;
-    await Company.destroy({where:{ id: companyId}});
-    res.json({message:"company deleted"})
-})
-router.put('/companies/:id',async(req,res)=>{
-    const companyId=req.params.id;
+// router.get('/companies', authenticate, retrieveAllCompanies)
+// router.post('/companies', authenticate, createNewCompany)
 
-    const company=await Company.findByPk(companyId);
+// router.route('/companies')
+//     .get(authenticate, retrieveAllCompanies)
+//     .post(authenticate, createNewCompany);
 
-    if(req.body.name){
-        company.name=req.body.name;
-    }
-    if(req.body.password){
-        company.password=req.body.password;
-    }
+router.route('/companies')
+    .get( retrieveAllCompanies)
+    .post( createNewCompany);
 
-    await company.save();
-    res.json(company);
-})
-module.exports=router;
+// router.get('/companies/:id', authenticate, retrieveCompany)
+// router.delete('/companies/:id', authenticate, deleteCompany)
+// router.put('/companies/:id', authenticate, updateCompany)
+
+// router.route('/companies/:id')
+//     .get(authenticate, retrieveCompany)
+//     .delete(authenticate, deleteCompany)
+//     .put(authenticate, updateCompany);
+
+router.route('/companies/:id')
+    .get( retrieveCompany)
+    .delete( deleteCompany)
+    .put( updateCompany);
+
+module.exports = router;

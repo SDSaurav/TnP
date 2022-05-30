@@ -1,40 +1,24 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-const {User}=require('../models');
-router.get('/users',async(req,res)=>{
-    const users=await User.findAll();
-    res.json(users);
-})
-router.post('/users',async(req,res)=>{
-    const user=new User(req.body);
-    await user.save();
-    res.json(user);
-})
-router.get('/users/:id',async(req,res)=>{
-    const userId=req.params.id;
-    // const user=await User.findByPk(userId);
-    const user=await User.findOne({where:{ id: userId}});
-    res.json(user);
-})
-router.delete('/users/:id',async(req,res)=>{
-    const userId=req.params.id;
-    await User.destroy({where:{ id: userId}});
-    res.json({message:"user deleted"})
-})
-router.put('/users/:id',async(req,res)=>{
-    const userId=req.params.id;
+const {authenticate} = require("../utils/middlewares");
+const {createNewUser, retrieveUser, deleteUser, retrieveAllUsers, updateUser} = require("../controllers/user-management");
 
-    const user=await User.findByPk(userId);
+// router.get('/users', authenticate, retrieveAllUsers)
+// router.post('/users', authenticate, createNewUser)
 
-    if(req.body.name){
-        user.name=req.body.name;
-    }
-    if(req.body.password){
-        user.password=req.body.password;
-    }
+router.route('/users')
+    .get(authenticate, retrieveAllUsers)
+    .post(authenticate, createNewUser);
 
-    await user.save();
-    res.json(user);
-})
-module.exports=router;
+// router.get('/users/:id', authenticate, retrieveUser)
+// router.delete('/users/:id', authenticate, deleteUser)
+// router.put('/users/:id', authenticate, updateUser)
+
+router.route('/users/:id')
+    .get(authenticate, retrieveUser)
+    .delete(authenticate, deleteUser)
+    .put(authenticate, updateUser);
+
+
+module.exports = router;
